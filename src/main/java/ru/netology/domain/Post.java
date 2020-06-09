@@ -3,16 +3,31 @@ package ru.netology.domain;
 public class Post {
 
     private int id;
+    private int ownerId;
     private int fromId;
+    private int createdBy;
     private int date;
     private String text;
-    private String attachmentsUrl;
+    private int replyOwnerId;
+    private int replyPostId;
+    private int friendsOnly;
+    private String postType;
+    private PostSource postSource;
+    private Geo geo;
+    private int signerId;
+    private int canPin;
+    private int canDelete;
+    private int canEdit;
+    private int isPinned;
+    private int markedAsAds;
+    private int postponedId;
+    private String attachmentsUrl; //в VK - array attachments;
     private ViewsInfo viewsInfo;
     private RepostsInfo repostsInfo;
     private LikesInfo likesInfo;
     private CommentsInfo commentsInfo;
-    private FavoritesInfo favoritesInfo;
-    private String originalSiteUrl;
+    private FavoritesInfo favoritesInfo; //в VK - is_favorite;
+    private String originalSiteUrl; //в VK - String copyright;
 
     public int getId() {
         return id;
@@ -44,6 +59,126 @@ public class Post {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public int getReplyOwnerId() {
+        return replyOwnerId;
+    }
+
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
+    }
+
+    public int getReplyPostId() {
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+    public int getFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(int friendsOnly) {
+        this.friendsOnly = friendsOnly;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public PostSource getPostSource() {
+        return postSource;
+    }
+
+    public void setPostSource(PostSource postSource) {
+        this.postSource = postSource;
+    }
+
+    public Geo getGeo() {
+        return geo;
+    }
+
+    public void setGeo(Geo geo) {
+        this.geo = geo;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public int getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(int canPin) {
+        this.canPin = canPin;
+    }
+
+    public int getCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(int canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public int getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(int canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public int getIsPinned() {
+        return isPinned;
+    }
+
+    public void setIsPinned(int isPinned) {
+        this.isPinned = isPinned;
+    }
+
+    public int getMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(int markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public int getPostponedId() {
+        return postponedId;
+    }
+
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
     }
 
     public String getAttachmentsUrl() {
