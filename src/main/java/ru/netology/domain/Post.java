@@ -15,11 +15,11 @@ public class Post {
     private PostSource postSource;
     private Geo geo;
     private int signerId;
-    private int canPin;
-    private int canDelete;
-    private int canEdit;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
     private int isPinned;
-    private int markedAsAds;
+    private boolean markedAsAds;
     private int postponedId;
     private String attachmentsUrl; //в VK - array attachments;
     private ViewsInfo viewsInfo;
@@ -133,28 +133,36 @@ public class Post {
         this.signerId = signerId;
     }
 
-    public int getCanPin() {
+    public boolean isCanPin() {
         return canPin;
     }
 
-    public void setCanPin(int canPin) {
+    public void setCanPin(boolean canPin) {
         this.canPin = canPin;
     }
 
-    public int getCanDelete() {
+    public boolean isCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(int canDelete) {
+    public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
     }
 
-    public int getCanEdit() {
+    public boolean isCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(int canEdit) {
+    public void setCanEdit(boolean canEdit) {
         this.canEdit = canEdit;
+    }
+
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
     }
 
     public int getIsPinned() {
@@ -163,14 +171,6 @@ public class Post {
 
     public void setIsPinned(int isPinned) {
         this.isPinned = isPinned;
-    }
-
-    public int getMarkedAsAds() {
-        return markedAsAds;
-    }
-
-    public void setMarkedAsAds(int markedAsAds) {
-        this.markedAsAds = markedAsAds;
     }
 
     public int getPostponedId() {
